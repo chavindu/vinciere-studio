@@ -1,6 +1,6 @@
 
 import type { Product, Category, BlogPost, PartnerLogo } from '@/types';
-import { Briefcase, ShoppingBag, Backpack, Wand2, Handbag, Wallet } from 'lucide-react';
+import { Briefcase, ShoppingBag, Backpack, Wand2, Wallet, Luggage } from 'lucide-react';
 
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -12,7 +12,7 @@ export const NAV_LINKS = [
 
 export const CATEGORIES: Category[] = [
   { id: '1', name: 'Totes', href: '/shop?category=totes', icon: Briefcase, image: 'https://picsum.photos/seed/tote/300/200' },
-  { id: '2', name: 'Crossbody', href: '/shop?category=crossbody', icon: Handbag, image: 'https://picsum.photos/seed/crossbody/300/200' },
+  { id: '2', name: 'Crossbody', href: '/shop?category=crossbody', icon: Luggage, image: 'https://picsum.photos/seed/crossbody/300/200' }, // Replaced Handbag with Luggage
   { id: '3', name: 'Backpacks', href: '/shop?category=backpacks', icon: Backpack, image: 'https://picsum.photos/seed/backpack/300/200' },
   { id: '4', name: 'Clutches', href: '/shop?category=clutches', icon: Wallet, image: 'https://picsum.photos/seed/clutch/300/200' },
   { id: '5', name: 'Shoulder Bags', href: '/shop?category=shoulder-bags', icon: ShoppingBag, image: 'https://picsum.photos/seed/shoulder/300/200' },
@@ -209,3 +209,4 @@ export const HERO_SLIDES = [
     overlayColor: 'bg-accent/30'
   },
 ];
+

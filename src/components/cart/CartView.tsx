@@ -7,7 +7,7 @@ import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
-import { X, Plus, Minus } from 'lucide-react';
+import { X, Plus, Minus, ShoppingCart } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 export function CartView() {
@@ -15,7 +15,7 @@ export function CartView() {
 
   if (cartItems.length === 0) {
     return (
-      <div className="text-center py-10">
+      <div className="text-center py-10 px-6"> {/* Added padding for better spacing */}
         <ShoppingCart className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
         <h3 className="text-xl font-semibold mb-2 text-primary">Your Cart is Empty</h3>
         <p className="text-muted-foreground mb-6">Looks like you haven&apos;t added anything to your cart yet.</p>
@@ -80,6 +80,8 @@ export function CartView() {
             // Implement checkout logic or link to checkout page
             alert('Proceeding to checkout (demo)');
             setIsCartOpen(false);
+            // Potentially redirect to a /checkout page
+            // import Router from 'next/router'; Router.push('/checkout');
           }}
         >
           Proceed to Checkout
@@ -89,3 +91,4 @@ export function CartView() {
     </div>
   );
 }
+
